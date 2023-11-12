@@ -23,10 +23,28 @@ export const Menu = styled.ul`
 export const Li = styled.li`
   font-weight: 600;
   cursor: pointer;
-  font-size: 26px;
+  font-size: 25px;
+  position: relative;
 
   a {
     text-decoration: none;
     color: #ffffff;
+  }
+
+  &::after {
+    content: '';
+    height: 3px;
+    width: ${(props) => (props.isActive ? '100%' : 0)};
+    background-color: #189b20;
+    position: absolute;
+    bottom: -10px;
+    //left: 0;
+    transition: width 0.5s ease-in-out;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  &:hover::after {
+    width: 100%;
   }
 `
