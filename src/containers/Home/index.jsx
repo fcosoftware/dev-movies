@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 
 import Button from '../../components/Button'
+import Modal from '../../components/Modal'
 import Slider from '../../components/Slider'
 import api from '../../Services/api'
 import { getImages } from '../../Ultils/getImages'
@@ -71,6 +72,7 @@ function Home() {
     <>
       {movie && (
         <Background imagem={getImages(movie.backdrop_path)}>
+          <Modal movieId={movie.id} />
           <Container>
             <Info>
               <h1>{movie.title}</h1>
