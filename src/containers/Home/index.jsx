@@ -38,7 +38,7 @@ function Home() {
 
   useEffect(() => {
     async function getAllData() {
-      //console.time('time')
+      // console.time('time')
 
       Promise.all([
         getMovies(),
