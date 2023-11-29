@@ -13,7 +13,7 @@ function Credits({ credits }) {
               <p>{artist.original_name}</p>
             </div>
           ))}
-          <di></di>
+          <div></div>
         </Container>
       )}
     </>

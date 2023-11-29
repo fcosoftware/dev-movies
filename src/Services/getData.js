@@ -46,7 +46,7 @@ export async function getMovieVideos(movieId) {
     data: { results }
   } = await api.get(`/movie/${movieId}/videos`)
 
-  return results[0]
+  return results
 }
 
 export async function getMovieCredtis(movieId) {
@@ -67,5 +67,6 @@ export async function getMovieSimilar(movieId) {
 
 export async function getMovieById(movieId) {
   const { data } = await api.get(`/movie/${movieId}`)
+
   return data
 }

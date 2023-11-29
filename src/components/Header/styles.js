@@ -10,8 +10,8 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 10px 50px;
-  background-color: ${(prop) =>
-    prop.chageBackground ? '#000' : 'transparent'};
+  background-color: ${(props) =>
+    props.chageBackground ? '#000' : 'transparent'};
   transition: background-color 0.6s ease-in-out;
 
   img {
